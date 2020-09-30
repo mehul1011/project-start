@@ -1,8 +1,10 @@
+body, html {
+    margin: auto 0;
+    font-family: Arial, Helvetica;
+}
+
 .zone {
-    padding:30px 50px;
-    margin:40px 60px;
     cursor:pointer;
-    display:inline-block;
     color:#FFF;
     font-size:2em;
     border-radius:4px;
@@ -15,6 +17,13 @@
     -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.box:hover {
+        -webkit-transform:rotate(-7deg);
+        -moz-transform:rotate(-7deg);
+        -o-transform:rotate(-7deg);
+        transform:rotate(-7deg);
 }
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
@@ -31,6 +40,35 @@
     background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
 }
 
+.nav-bar {
+    display: flex;
+    list-style: none;
+    font-size: 30px;
+    margin: 0;   
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    /* color: #ffc600; */
+    color: #000000;
+    font-weight: bolder;
+}
+
+.push {
+    margin-left: auto;
+}
+
+
 /***********************************************************************
  *  Red Background
  **********************************************************************/
@@ -42,7 +80,16 @@
     background: -o-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #C655BE 0%,#cf0404 100%); /* IE10+ */
     background: linear-gradient(top, #C655BE 0%,#cf0404 100%); /* W3C */
+    display: grid;
 }
+
+.container {
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /***********************************************************************
  *  Yellow Background
@@ -57,6 +104,10 @@
     background: linear-gradient(top, #F3AAAA 0%,#febf04 100%); /* W3C */
 }
 
+.yellow {
+    text-align: center; 
+}
+
 /***********************************************************************
  *  Blue Background
  **********************************************************************/
@@ -68,4 +119,53 @@
     background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
     background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+}
+
+.box > img {
+    width: 100%;
+}
+
+.box {
+    padding: 130px;
+    margin: 20px;
+    background-color: #000000;
+}
+
+
+
+@media all and (max-width: 768px) { 
+    .nav-bar {
+        font-size: 0.5em;
+        padding: 0;
+    }
+    .box {
+        padding: 200px;
+        margin: 20px;
+        background-color: #000000;
+
+    }
+    .grid-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    }
+}
+
+@media all and (max-width: 500px) { 
+    .nav-bar {
+        font-size: 0.5em;
+        padding: 0;
+    }
+    .push {
+        margin-left: 0px;
+    }
+    .box {
+        padding: 130px;
+        margin: 2transform    background-color: #000000;
+
+    }
 }
